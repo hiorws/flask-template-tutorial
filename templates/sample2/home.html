@@ -1,0 +1,23 @@
+{% extends "sample2/layout.html" %}
+
+{% block title %}
+  Homepage
+{% endblock %}
+
+{% block head %}
+  {{ super() }}
+  <h6>head block starts from home.html</h6>
+  <style type="text/css">
+    .important { color: #336699; }
+  </style>
+  <h6>head block ends from home.html</h6>
+{% endblock %}
+
+{% block content %}
+  <h6>content block starts from home.html</h6>
+  <h1>Welcome Homepage</h1>
+  <p class="important">
+    Welcome on my awesome homepage.
+  </p>
+  <h6>content block ends from home.html</h6>
+{% endblock %}

@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <head>
+    {% block head %}
+    <h6>head block starts from layout.html</h6>
+    <h2>HEAD</h2>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>
+        {% block title %}
+        
+        {% endblock %} - Zops Jinja2 Templates
+    </title>
+    <h6>head block ends from layout.html</h6>
+    {% endblock %}
+  </head>
+
+  <body>
+    <div id="content">
+        {% block content %}
+            <h6>content block starts from layout.html</h6>
+            <h6>content block ends from layout.html</h6>
+        {% endblock %}
+    </div>
+
+    <div id="footer">
+
+      {% block footer %}
+        <h6>footer block starts from layout.html</h6>
+        &copy; Copyleft 2018 by <a href="http://zetaops.io/">ZetaOps</a>.
+        <h6>footer block ends from layout.html</h6>
+      {% endblock %}
+
+    </div>
+  </body>
+
+</html>

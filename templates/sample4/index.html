@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+{% macro input(name, value='', type='text', size=20) -%}
+    <input type="{{ type }}" name="{{ name }}" value="{{ value|e }}" size="{{ size }}">
+{%- endmacro %}
+
+<p>{{ input('username') }}</p>
+
+<p>{{ input('name') }}</p>
+
+<p>{{ input('password', type='password') }}</p>
+
+
+</body>
+</html>
